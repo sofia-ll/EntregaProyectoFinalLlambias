@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar brand="SOFIA LLAMBIAS" />
-      <ItemListContainer hobbies={["cantar", "ir a museos de arte."]} />
+      <ItemListContainer hobbies={["cantar", "ir a museos de arte"]} />
     </>
   )
 }

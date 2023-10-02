@@ -1,0 +1,451 @@
+
+@media(min-width:1024px){
+
+    body{
+        margin-top: 40px;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .primeraysegundamq{
+        display: none;
+    }
+
+    .obrassegmq{
+        display: none;
+    }
+
+    .desktop{
+        display:inline-block;
+    }
+    
+    nav a {
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 2px 10px 2px 10px;
+        border-radius: 10px;
+    }
+
+    nav a:hover, h1 a:hover, .footer_a:hover {
+        background-color:rgba(108, 107, 110, 0.358);
+        color: rgb(240, 237, 239);
+        transition-property: all;
+        transition-duration: 0.5s;
+        border-radius: 10px;
+    }
+
+    .padd{
+        padding-left: 60px;
+    }
+
+    h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        letter-spacing: 4px;
+        font-weight: lighter;
+        border-radius: 10px;
+        word-spacing: 5px;
+    }
+
+    h1 a {
+        font-size: 20px;
+        color: $color;
+        font-weight: lighter;
+        height: 50px;
+    }
+    
+    nav .desktop{
+        padding: 20px;
+    }
+
+    nav ul {
+        margin: 40px;
+            li {
+        display: inline;
+        padding: 2px 2px 0px 0px;
+        margin: 0px;;
+                }
+    }
+
+    nav li {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .h1{
+        grid-area: h1;
+    }
+
+    .inicionav{
+        grid-area: inicionav;
+    }
+
+    .cvnav{
+        grid-area: cvnav;
+    }
+
+    .obrasnav{
+        grid-area: obrasnav;
+    }
+
+    .muestrasnav{
+        grid-area: muestrasnav;
+    }
+
+    .contactonav{
+        grid-area: contactonav;
+    }
+
+    .tiendanav{
+        grid-area: tiendanav;
+    }
+
+    .navdesktop{
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+        "h1 inicionav cvnav obrasnav muestrasnav contactonav tiendanav";
+        gap: 5px;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-template-rows: auto;
+        height: 40px;
+        margin: 0;
+        padding-left: 0;
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+
+    .nbdsp {
+        border-radius: 20px;
+        background-color: rgb(240, 237, 239);
+        height: 100px;
+        margin: 40px 5px 10px 5px;
+        width: 100%;
+    }
+    
+    .subtitulo {
+        font-family: 'Montserrat', sans-serif;
+        height: 60px;
+        letter-spacing: 4px;
+        padding: 2px 2px 0px 2px;
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        background-color: $colorsubt;
+        font-size: 50px;
+        color: white;
+    }
+
+    h2{
+        padding: 10px
+    }
+    
+    .licv{
+        list-style: none;
+    } 
+
+    .c ul {
+        height: 600px;
+    }
+
+    .exlab{
+        height: 439px;
+        background-color: rgba(154, 136, 124, 0.107);
+    }
+
+    .ecl{
+        height: 174px;
+    }
+
+    .cardcvdesktop{
+        border-radius: 20px;
+        border: 0.5px solid rgb(154, 136, 124);
+    }
+
+    .imgcard{
+        height: 500px;
+        margin-top: 0;
+    } 
+
+    .finoabajo{
+        margin-bottom: 0;
+    }
+
+/* galeria de imagenes obras */
+        
+    .imagenes_obras{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        gap: 5px;
+        margin-top: 20px;
+    }
+    
+    .img_obras{
+        width: 25vw;
+        border-radius: 5px;
+    }
+
+    .artimgobras{
+        margin-bottom: 30px;
+    }
+    .artimgobras:hover{
+        transform: scale(1.1);
+        transition-property: all;
+        transition-duration: 1.5s;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .boton_tienda:hover{
+        transform: scale(1.1);
+        transition-property: all;
+        transition-duration: 1.5s;
+    }
+    
+/* footer desktop */
+
+    footer section a {
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .footerdesktop p{
+        color:rgba(86, 85, 87, 0.475);
+    }
+    
+    .finicio{
+        grid-area: inicio;
+    }
+
+    .fcontacto{
+        grid-area: contacto;
+    }
+
+    .copyr{
+        grid-area: copyr;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .fredes{
+        grid-area: redes;
+    }
+
+    .footerdesktop{
+        margin: 25px 5px 10px 5px;
+        display: grid;
+        grid-template-areas:
+        "inicio contacto copyr redes";
+        grid-template-columns: 1fr 1fr 4fr 1fr;
+        grid-template-rows: auto;
+        align-items: baseline;
+        background-color: rgb(240, 237, 239);
+        padding: 10px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .footer_a{
+        margin: 10px;
+    }
+    
+    .redes img:hover {
+        transform: rotate(360deg) scale(1.5);
+        transition: all 2s;
+    }
+    
+    .multimedia{
+        margin: 0 0 20px 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 560px;
+        text-align: justify;
+    }
+
+    .sections_info h2 {
+        margin-bottom: 10px;
+        font-weight: bolder;
+    }
+
+     // contacto
+
+    .contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-image: url(../img/foto_contacto.jpg);
+    background-size: cover;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    }
+    
+    .consulta{
+        background-color: rgba(255, 255, 48, 0.726);
+    }
+
+    .datos_contacto{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .datos_contacto button{
+        display: inline;
+        padding: 20px;
+        background-color: rgba(255, 255, 48, 0.726);
+        border-radius: 10px;
+        border: 0.2px solid $color;
+    }
+    
+    .muestras{
+        margin-left: 20px;
+    }
+
+    .obrassegmq{
+        display: none;
+    }
+
+    // muestras
+
+    .iframe{
+        text-align: center;
+        height:100%;
+    }
+
+    .muestrasPapa{
+        margin-top: 20px;
+    }
+
+    .muno {
+        ul{
+        height: 430px;
+        background-color:white;
+        }
+    }
+
+    .mdos {
+        ul{
+        height: 750px;
+        background-color:white;
+        }
+    }
+
+    .mtres {
+        ul{
+        height: 600px;
+        background-color:white;
+        }
+    }
+
+
+    .mcuatro {
+        ul{
+        height: 180px;
+        background-color:white;
+        }
+    }
+
+    .mcinco {
+        ul{
+        height: 170px;
+        background-color:white;
+        }
+    }
+
+    .video{
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    caption{
+        height: 50px;
+    }
+
+    .bm{
+        background-color:white;
+    }
+
+    .centrado{
+        text-align: center;
+    }
+
+    .bgcv{
+        background-color: rgba(154, 136, 124, 0.107);
+    }
+
+    .subtsegundamq{
+        display: none;
+    }
+
+    .barrasubt{
+        display: none;
+    }
+
+    .n {
+        display: none;
+    }
+
+    .img_experiencias{
+        width: 80%;
+        text-align: justify;
+        border-radius: 10px;
+    }
+
+    .fonttype{
+        font-family: $fontfamily;
+        color: $colordos;
+        margin-right: 200px;
+    }
+
+       // carrito
+
+    .carrito-vacio{
+        display: none;
+    }
+
+    .carrito-laminas{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+.carrito-laminas small {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.carrito-laminas-eliminar {
+    border: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.carrito-laminas-agregar {
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(250, 77, 189, 0.464);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.img_obras_carrito{
+        width: 100px;
+        border-radius: 5px;
+    }
+
+}

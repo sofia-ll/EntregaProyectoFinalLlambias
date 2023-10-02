@@ -1,0 +1,48 @@
+@media(min-width:768px){
+    .desktop{
+        display:none;
+    }
+
+    .mainmobile{
+        display: none;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .mainobrassegmq{
+        display:inline-block;
+    }
+
+    .mta{
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+
+    .subcv{
+        margin-top: 20px;
+    }
+
+    header{
+        margin-bottom: 15px;
+    }
+
+    .footerdesktop{
+        display: none;
+    }
+
+    .cardcontactopsm{
+        margin-bottom: 30px;
+    }
+
+    .footerdesktop{
+        margin-top: 15px;
+    }
+
+    .bgcv{
+        background-color: rgba(154, 136, 124, 0.107);
+    }
+
+}
+

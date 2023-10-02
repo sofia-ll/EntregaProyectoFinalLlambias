@@ -1,0 +1,359 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: $textdecoration;
+        color: rgb(108, 107, 110);
+    }
+    
+    body {
+        font-family: $fontfamily;
+        color: $colordos;
+        font-size: $size;
+        background-color: $colortres;
+        margin: 10px;
+        @media (min-width:1024px){
+            margin: 20px 40px 20px 40px;
+        }
+    }
+
+    .curriculum, .section_imagen_cv, .formacion, .cursos, .experiencia_laboral {
+        display: none;
+    }
+
+        /* navbar */
+
+    .bkc{
+        color: rgba(108, 107, 110, 0.358);
+    }
+    
+    .bg{
+        background-color:rgb(240, 237, 239) ;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+
+    .bgcv{
+        background-color: rgba(154, 136, 124, 0.107);
+    }
+
+    .logo{
+        color: rgb(86, 85, 87);
+        letter-spacing: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    header{
+        background-color: $bgheaderyf;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    .desktop{
+        display: none;
+    }
+
+    /* main cv */
+
+    .barrasubt{
+        background-color: $colorsubt;
+    }
+
+    .border{
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 4px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: none;
+        padding-top: 5px;
+        background-color: rgba(154, 136, 124, 0.107);
+        height: calc($alto / 2);
+    }
+
+    .justify{
+        text-align: justify;
+    }
+
+    .card{
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .fotoperfilcv{
+        margin-top: 10px;
+    }
+
+    .licv{
+        list-style: none;
+    }
+
+    /* main obras */
+
+    .mainobrassegmq{
+        display:none;
+    }
+
+    /* footer */
+    
+    .logo{
+        grid-area: logo;
+        text-align: center;
+        margin: 5px;
+        font-size: 30px;
+    }
+
+    .redessociales{
+        grid-area: redessociales;
+        margin: 5px;
+    }
+
+    .derechos{
+        grid-area: derechos;
+        font-size: 15px;
+        margin: 5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    footer {
+        display: grid;
+        background-color: rgba(86, 85, 87, 0.475);
+        color: rgb(240, 237, 239);
+        padding: 10px;
+        border-radius: 20px;
+        font-family: 'Montserrat', sans-serif;
+        grid-template-areas:
+        "logo logo logo"
+        "redessociales redessociales redessociales"
+        "derechos derechos derechos";
+        gap: 5px;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 40% auto auto;
+        margin-bottom: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer .mobile a{
+        margin: 10px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .pfootermobile{
+        color: white;
+    }
+    
+    .multimedia{
+        margin: 0 0 20px 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 560px;
+        text-align: justify;
+    }
+    
+    .subtitulo {
+        font-family: 'Montserrat', sans-serif;
+        height: 40px;
+        letter-spacing: 4px;
+        font-weight: lighter;
+        padding: 2px 2px 0px 2px;
+        text-align: center;
+        border-radius: 10px;
+        width: 100vw;
+        margin: 5px;
+        background-color: rgba(154, 136, 124, 0.107);
+    }
+
+    .barrasubt{
+        font-weight: 200px;
+        font-size: 50px;
+        color: white;
+        font-weight: lighter;
+        background-color: $colorsubt;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+
+    .sections_info h2 {
+        margin-bottom: 10px;
+        font-weight: bolder;
+    }
+
+    .contacto article h3 {
+        text-align: center;
+    }
+    
+    .mail{
+        display: block;
+    }
+
+    .muestras{
+        margin-left: 20px;
+    }
+
+    .mixinUno{
+        @include size (100%, 500px);
+    }
+
+    .maincontacto{
+        height: 540px;
+        @media (min-width:576px){
+            @include size (100%, 700px);
+        }
+        @media (min-width: 768px){
+            @include size (100%, 850px);
+        }  
+        @media (min-width:1024px){
+            @include size (100%, 600px);
+        }
+    }
+
+    .contacto{
+        display: none;
+    }
+
+    .cardcontacto{
+        margin-top: 20px;
+    }
+
+    .textocardcont{
+        background-color: yellow;
+    }
+
+    .botoncont{
+        display: inline;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        border: 0.2px solid $color;
+        color:rgba(250, 77, 189, 0.823);
+    }
+
+        .fino{
+        height: 2px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        background-color: $colorsubt;
+            @media (min-width:576px){
+                @include size (100%, 10px);
+            }
+            @media (min-width: 768px){
+                @include size (100%, 12px);
+            }  
+            @media (min-width:1024px){
+                @include size (100%, 15px);
+            }
+            .mb{
+                margin-bottom: 15px;
+            }
+}
+
+// muestras
+
+    .videopsm{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        height: 202px;
+        width: 360px;
+        @media (min-width:576px){
+            @include size (560px, 315px);
+        }
+        @media (min-width:768px){
+            @include size (800px, 450px);
+        }
+    }
+
+    .m1 ul, .m2 ul, .m3 ul, .m4 ul, .m5 ul{
+        border-radius: 10px;
+    } 
+
+    ul li {
+        padding: 0;
+    }
+
+    .cv{
+        margin-top: 20px;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+
+    .boton-cards{
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .boton_tienda{
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .cont_tienda{
+        display:flex;
+    }
+
+    .boton_compra{
+        padding: 10px;
+        border-radius: 10px;  
+        background-color: rgba(255, 255, 48, 0.726);;
+        width: 100%;
+    }
+
+    .negrita{
+        font-weight: bold;
+    }
+
+    .contenedor-carrito{
+        display:grid;
+        grid-template-areas:
+        "carrito_vacio"
+        "carrito_laminas"
+        "carrito_boton";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .carrito-vacio{
+        grid-area: carrito_vacio;
+    }
+
+    .carrito-laminas{
+        grid-area: carrito_laminas;
+    }
+
+    .carrito_boton{
+        grid-area: carrito_boton;
+    }
+
+    .icono_carrito:hover {
+        background-color: rgba(250, 77, 189, 0.464);
+    }
+
+    #boton_vaciar_carrito{
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #boton_compra{
+        border-radius: 20px;
+        padding: 10px;
+        background-color: rgba(255, 255, 0, 0.599);
+    }
+
+    #contenedor-carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
