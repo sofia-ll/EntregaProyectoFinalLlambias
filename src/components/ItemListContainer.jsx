@@ -1,18 +1,25 @@
-const ItemListContainer = (greeting) => {
+import { useState, useEffect } from "react";
+import pedirLaminas from "./pedirLaminas";
+import ItemList from "./ItemList";
 
-    const nombre = "Sofía"
-    const colorpelo = "rubio"
+
+const ItemListContainer = () => {
+
+    const [laminas, setLaminas] = useState([]);
+
+    useEffect(() => {
+        pedirLaminas()
+            .then((res) => {
+                setLaminas(res);
+            })
+    }, [])
+
+
 
     return (
-        <main className="main">
-            <p>¡Hola {nombre}!</p>
-            <p>Tenés el pelo {colorpelo}</p>
-            <p>Te gusta:</p>
-            <p>{greeting.hobbies[0]}</p>
-            <p>y también </p>
-            <p>{greeting.hobbies[1]}</p>
-        </main>
+        <ItemList laminas={laminas} />
     )
-}
+};
+
 
 export default ItemListContainer

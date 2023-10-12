@@ -29,9 +29,9 @@
         border-radius: 10px;
     }
 
-    nav a:hover, h1 a:hover, .footer_a:hover {
-        background-color:rgba(108, 107, 110, 0.358);
-        color: rgb(240, 237, 239);
+    .navahover:hover, h1 a:hover, .footer_a:hover, .navbar-brand:hover {
+        // background-color:rgba(108, 107, 110, 0.358);
+        color: $colorfooter;
         transition-property: all;
         transition-duration: 0.5s;
         border-radius: 10px;

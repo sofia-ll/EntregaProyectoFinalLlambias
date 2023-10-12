@@ -1,0 +1,56 @@
+[
+    {
+    "imagen": "../src/img/litografia/paradigmas1.jpg", 
+    "alt": "obras tecnica litografia", 
+    "id": 0, 
+    "nombre": "Litografía 1", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "category": "Litografía"
+},
+{
+    "imagen":"../src/img/escultura/escultura1.jpg", 
+    "alt":"obras tecnica escultura", 
+    "id": 1, 
+    "nombre": "Escultura 1", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "category": "Escultura"
+},          
+{
+    "imagen":"../src/img/pintura1.jpg", 
+    "alt":"obras tecnica pintura", 
+    "id": 2, 
+    "nombre": "Pintura 1", 
+    "precio": 12000, 
+    "tamano": "50 cm x 50 cm", 
+    "category": "Pintura"
+},
+{
+    "imagen":"../src/img/calados1.jpg", 
+    "alt":"obras tecnica calado", 
+    "id": 3, 
+    "nombre": "Calado 1", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "category": "Calados"
+},
+{
+    "imagen":"../src/img/dibujo1.jpg", 
+    "alt":"obras tecnica dibujo", 
+    "id": 4, 
+    "nombre": "Dibujo 1", 
+    "precio": 12000, 
+    "tamano": "50 cm x 50 cm", 
+    "category": "Dibujos"
+},
+{
+    "imagen":"../src/img/fotografia1.jpg", 
+    "alt":"obras tecnica fotografia", 
+    "id": 5, 
+    "nombre": "Fotografía 1", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "category": "Fotografia"
+}
+]

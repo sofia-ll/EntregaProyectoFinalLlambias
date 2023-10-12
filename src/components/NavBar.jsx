@@ -1,48 +1,30 @@
 import CartWidget from "./CartWidget"
+import { Link, NavLink, useNavigate } from "react-router-dom"
+
+
 const NavBar = (props) => {
+
+    const navigate = useNavigate()
 
     return (
 
         <header className="header">
-            <a className="navbar-brand" href="../index.html">{props.brand}</a>
+
+            <Link className="navbar-brand" to="/">
+                <h1>{props.brand}</h1>
+            </Link>
+
             <nav className="navbar">
-                <a href="#">C.V</a>
-                <a href="#">Obras</a>
-                <a href="#">Muestras</a>
-                <a href="#">Contacto</a>
-                <a href="#"><CartWidget icono_carrito="" numero_carrito="0" /></a>
+                <NavLink to="/litografia" className="navahover">Litografía</NavLink>
+                <NavLink to="/escultura" className="navahover">Escultura</NavLink>
+                <NavLink to="/pintura" className="navahover">Pintura</NavLink>
+                <NavLink to="/calados" className="navahover">Calados</NavLink>
+                <NavLink to="/dibujo" className="navahover">Dibujo</NavLink>
+                <NavLink to="/fotografia" className="navahover">Fotografía</NavLink>
+                <NavLink to="/carrito"><button onClick={() => navigate("/carrito")}><CartWidget icono_carrito="" numero_carrito="0" /></button></NavLink>
             </nav>
-
-            {/* navbar bootstrap */}
-            {/* < nav className="navbar navbar-expand-lg navbar-light desktop" >
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="../index.html">{props.brand}</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse show" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
-                            <a className="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                            <a className="nav-link" href="#">C.V</a>
-                            <a className="nav-link" href="#">Obras</a>
-                            <a className="nav-link" href="#">Muestras</a>
-                            <a className="nav-link" href="#">Contacto</a>
-                            <a className="nav-link" href="#">TIENDA</a>
-                            <a href="#"><CartWidget icono_carrito="" numero_carrito="0" /></a>
-                        </div>
-                    </div>
-                </div>
-            </nav> */}
-
-        </header>
+        </header >
     )
 }
 
 export default NavBar
-
-
-
-
-
-
-
