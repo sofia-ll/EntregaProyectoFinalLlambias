@@ -1,44 +1,30 @@
-const ItemDetailContainer = (greeting) => {
+import { useState, useEffect } from "react";
+import ItemDetail from "./ItemDetail";
+import pedirLaminaPorId from "./pedirLaminaPorId";
+import { useParams } from "react-router-dom";
 
-    // const promesa = new Promise((res, rej) => {
-    //     //aca esta la logica
-    //     setTimeout(() => {
-    //         res([1, 2, 3, 4, 5])
-    //     }, 2000)
-    // })
 
-    // console.log("Hola")
+const ItemDetailContainer = () => {
 
-    // promesa.then((res) => {
-    //     console.log(res)
-    //     console.log("Then")
-    // })
+    const [item, setItem] = useState(null);
+    const id = useParams().id;
 
-    // promesa.catch((error) => {
-    //     console.log(error)
-    //     console.log("Catch")
-    // })
 
-    // promesa.finally(() => {
-    //     console.log("Finally")
-    // })
+    useEffect(() => {
 
-    // console.log(promesa)
-
+        pedirLaminaPorId(Number(id))
+            .then((res) => {
+                setItem(res);
+            })
+    }, [id])
 
     return (
-        <main className="main">
-
-            {/* <p>¡Hola {nombre}!</p>
-            <p>Tenés el pelo {colorpelo}</p>
-            <p>Te gusta:</p>
-            <p>{greeting.hobbies[0]}</p>
-            <p>y también </p>
-            <p>{greeting.hobbies[1]}</p> */}
-        </main>
+        <div>
+            {item && <ItemDetail item={item} />}
+        </div>
     )
+
 }
 
+
 export default ItemDetailContainer
-
-

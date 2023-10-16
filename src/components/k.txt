@@ -1,0 +1,47 @@
+import { useNavigate, useParams } from "react-router-dom"
+import laminas from "../data/laminas.json"
+import { useEffect, useState } from "react"
+
+function ItemDetailContainer() {
+
+    const [loading, setLoading] = useState(true)
+    const [lamina, setLamina] = useState({})
+    const [notFound, setNotFound] = useState(true)
+    const navigate = useNavigate()
+    const params = useParams()
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+            laminas.forEach(lamina => {
+                if (lamina.id === parseInt(params.id)) {
+                    setNotFound(false)
+                    setProducto(lamina)
+                }
+
+            })
+        }, 2000);
+
+    }, [])
+
+
+    useEffect(() => {
+        if (notFound && !loading) {
+            navigate("/404")
+        }
+    }, [notFound, loading])
+
+
+    if (loading) {
+        return <p>Cargando...</p>
+    }
+
+    return (
+        <div>
+            <Item lamina={lamina} />
+        </div>
+    )
+}
+export default ItemDetailContainer
+
+

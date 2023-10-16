@@ -3,23 +3,25 @@ import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import Footer from "./components/Footer"
-import { BrowserRouter } from "react-router-dom";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Litografia from "./components/Litografia"
 
 
 function App() {
   return (
     <>
       <BrowserRouter >
+
         <NavBar brand="SOFIA LLAMBIAS" />
-        <ItemListContainer hobbies={["cantar", "ir a museos de arte"]} />
-        <ItemDetailContainer />
-        {/* <Routes>
+
+        <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:id" element={<ItemListContainer />} />
-          <Route path="/lamina/:id" element={<ItemDetailContainer />} />
-          <Route path="/:test" element={<p>404 vuelva a intenta por favor</p>} />
-        </Routes> */}
+          <Route path="/item:id" element={<ItemDetailContainer />} />
+          <Route path="/laminas" element={<ItemListContainer />} />
+          <Route path="/laminas/:categoria" elemnt={<ItemListContainer />} />
+          <Route path="/litografia" element={<Litografia />} />
+
+        </Routes>
         <Footer />
       </BrowserRouter >
     </>

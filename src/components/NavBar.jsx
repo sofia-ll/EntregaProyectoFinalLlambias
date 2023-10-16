@@ -1,3 +1,4 @@
+import React from "react";
 import CartWidget from "./CartWidget"
 import { Link, NavLink, useNavigate } from "react-router-dom"
 
@@ -15,13 +16,15 @@ const NavBar = (props) => {
             </Link>
 
             <nav className="navbar">
-                <NavLink to="/litografia" className="navahover">Litografía</NavLink>
-                <NavLink to="/escultura" className="navahover">Escultura</NavLink>
-                <NavLink to="/pintura" className="navahover">Pintura</NavLink>
-                <NavLink to="/calados" className="navahover">Calados</NavLink>
-                <NavLink to="/dibujo" className="navahover">Dibujo</NavLink>
-                <NavLink to="/fotografia" className="navahover">Fotografía</NavLink>
-                <NavLink to="/carrito"><button onClick={() => navigate("/carrito")}><CartWidget icono_carrito="" numero_carrito="0" /></button></NavLink>
+                <Link to="/" className="navahover">Inicio</Link>
+                <Link to="/laminas" className="navahover">LAMINAS</Link>
+                <Link to="/laminas/litografia" className="navahover">Litografía</Link>
+                <Link to="/laminas/escultura" className="navahover">Escultura</Link>
+                <Link to="/laminas/pintura" className="navahover">Pintura</Link>
+                <Link to="/laminas/calados" className="navahover">Calados</Link>
+                <Link to="/laminas/dibujo" className="navahover">Dibujo</Link>
+                <Link to="/laminas/fotografia" className="navahover">Fotografía</Link>
+                <Link to="/carrito"><button onClick={() => navigate("/carrito")}><CartWidget icono_carrito="" numero_carrito="0" /></button></Link>
             </nav>
         </header >
     )
