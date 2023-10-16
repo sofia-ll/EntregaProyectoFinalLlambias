@@ -1,3 +1,4 @@
+import data from "../data/laminas.json";
 const pedirLaminaPorId = (id) => {
     return new Promise((resolve, reject) => {
         

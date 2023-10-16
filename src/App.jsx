@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/item:id" element={<ItemDetailContainer />} />
           <Route path="/laminas" element={<ItemListContainer />} />
-          <Route path="/laminas/:categoria" elemnt={<ItemListContainer />} />
+          <Route path="/laminas/:categoria" element={<ItemListContainer />} />
           <Route path="/litografia" element={<Litografia />} />
 
         </Routes>

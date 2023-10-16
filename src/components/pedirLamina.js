@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 
 
-
 function pedirLamina() {
 
     const [lamina, setLamina] = useState();

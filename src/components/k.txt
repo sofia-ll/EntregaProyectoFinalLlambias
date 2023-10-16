@@ -44,4 +44,49 @@ function ItemDetailContainer() {
 }
 export default ItemDetailContainer
 
+import React, { useState } from 'react'
 
+const TextItemCount = () => {
+
+    const [mostrar, setMostrar] = useState(true);
+
+    function handleMostrar() {
+        setMostrar(!mostrar);
+    }
+
+    return (
+        <div>
+            <button onClick={handleMostrar}></button>
+        </div>
+    )
+}
+
+export default TextItemCount
+
+{}
+
+// <Link className="ver-mas card-body text-center" to={`/item/${laminas.id}`}>
+//     <main className="main">
+//         <img className="img_obras" src={laminas.imagen} alt={laminas.alt} ></img>
+//         <div className="cont">
+//             <div className="card-body text-center">
+//                 <p className="card-text fs-6 justify producto titulo"><span className="bold"></span> {laminas.nombre}</p>
+//             </div>
+//             <div className="card-body text-center">
+//                 <p className="card-text fs-6 justify tamano"><span className="bold">{laminas.tamano}</span> </p>
+//             </div>
+//             <div className="card-body text-center">
+//                 <p className="card-text fs-6 justify precio"><span className="bold">${laminas.precio}</span> </p>
+//             </div>
+//             <div className="card-body text-center">
+//                 <p className="card-text fs-6 justify precio"><span className="bold">Categoría: {laminas.category}</span> </p>
+//             </div>
+//             <div className="">
+
+//             </div>
+
+//         </div>
+//     </main>
+// </Link>
+
+// 

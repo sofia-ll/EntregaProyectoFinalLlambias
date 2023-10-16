@@ -1,3 +1,4 @@
+import React from "react"
 import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom"
 
@@ -28,8 +29,7 @@ const ItemDetail = (lamina) => {
 
                     <div className="card-body text-center">
                         <button className="card-text fs-6 justify button boton_tienda" id={lamina.id}>
-                            HACER BOTON COUNTER
-                            <ItemCount />
+                            <ItemCount stock={10} inicial={1} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
                         </button>
                     </div>
                 </div>

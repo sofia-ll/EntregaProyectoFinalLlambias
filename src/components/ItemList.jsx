@@ -1,35 +1,30 @@
+import React from "react";
 import Item from "./Item"
 
-const ItemList = ({ laminas }) => {
+const ItemList = ({ laminas, subtitulo }) => {
     return (
         <main className="main">
-            <section className="subtitulo">
-                <h5> LAMINAS:</h5>
-            </section>
-            {
-                //     laminas.length > 0 &&
-                //     laminas.map(lamina) => {
-                //         return(
-                //esto seria otra opción de ITEM solo//
-                // <div>
-                //     <img src={lamina.imagen} alt={lamina.alt} />
-                //     <h2>{lamina.nombre}</h2>
-                //     <p>{lamina.tamano}</p>
-                //     <p>${lamina.precio}</p>
-                //     <p>${lamina.category}</p>
-                // </div>
-                // )
-                //     })
-                laminas.length > 0 &&
+            <h5 className="subtitulo">{subtitulo}</h5>
 
-                laminas.map((lamina) => {
-                    return (
-                        <Item key={lamina.id} lamina={lamina} />
-                    )
-                })
-            }
+            <div className="laminas">
+                {laminas.map((lamina) => <Item key={lamina.id} lamina={lamina} />)}
+            </div>
         </main>
     )
 };
 
 export default ItemList
+
+//     laminas.length > 0 &&
+//     laminas.map(lamina) => {
+//         return(
+//esto seria otra opción de ITEM solo//
+// <div>
+//     <img src={lamina.imagen} alt={lamina.alt} />
+//     <h2>{lamina.nombre}</h2>
+//     <p>{lamina.tamano}</p>
+//     <p>${lamina.precio}</p>
+//     <p>${lamina.category}</p>
+// </div>
+// )
+//     })

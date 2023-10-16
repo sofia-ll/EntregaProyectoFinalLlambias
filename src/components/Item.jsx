@@ -1,5 +1,6 @@
-// import React from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 
 const Item = ({ lamina }) => {
@@ -21,8 +22,10 @@ const Item = ({ lamina }) => {
                     <div className="card-body text-center">
                         <p className="card-text fs-6 justify precio"><span className="bold">Categoría: {lamina.category}</span> </p>
                     </div>
-                    <div className="">
-
+                    <div className="card-body text-center">
+                        <button className="card-text fs-6 justify button boton_tienda" id={lamina.id}>
+                            <ItemCount />
+                        </button>
                     </div>
 
                 </div>
