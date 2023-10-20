@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom"
 
 const ItemDetail = (lamina) => {
-
+    console.log(lamina)
     return (
 
         <Link className="ver-mas" to={`/item/${lamina.id}`}>
@@ -26,12 +26,10 @@ const ItemDetail = (lamina) => {
                         <p className="card-text fs-6 justify precio"><span className="bold">Categoría: {lamina.descripcion}</span> </p>
                     </div>
 
-
-                    <div className="card-body text-center">
-                        <button className="card-text fs-6 justify button boton_tienda" id={lamina.id}>
-                            <ItemCount stock={10} inicial={1} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
-                        </button>
+                    <div className="card-text fs-6 justify button boton_tienda card-body text-center" id={lamina.id}>
+                        <ItemCount stock={10} inicial={1} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
                     </div>
+
                 </div>
             </main>
         </Link>

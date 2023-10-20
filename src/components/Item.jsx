@@ -7,7 +7,7 @@ const Item = ({ lamina }) => {
 
     return (
         <Link className="ver-mas" to={`/item/${lamina.id}`}>
-            <main className="main card-body text-center">
+            <main className="main card-body text-center card-text fs-6 justify boton_tienda">
                 <img className="img_obras" src={lamina.imagen} alt={lamina.alt} ></img>
                 <div className="cont">
                     <div className="card-body text-center">
@@ -22,16 +22,17 @@ const Item = ({ lamina }) => {
                     <div className="card-body text-center">
                         <p className="card-text fs-6 justify precio"><span className="bold">Categoría: {lamina.category}</span> </p>
                     </div>
-                    <div className="card-body text-center">
-                        <button className="card-text fs-6 justify button boton_tienda" id={lamina.id}>
-                            <ItemCount />
-                        </button>
-                    </div>
 
+                    <div className="card-text fs-6 justify button card-body text-center" id={lamina.id}>
+                        <ItemCount />
+                    </div>
                 </div>
             </main>
         </Link>
     )
 }
 
-export default Item 
+export default Item
+
+
+

@@ -14,17 +14,3 @@ const ItemList = ({ laminas, subtitulo }) => {
 };
 
 export default ItemList
-
-//     laminas.length > 0 &&
-//     laminas.map(lamina) => {
-//         return(
-//esto seria otra opción de ITEM solo//
-// <div>
-//     <img src={lamina.imagen} alt={lamina.alt} />
-//     <h2>{lamina.nombre}</h2>
-//     <p>{lamina.tamano}</p>
-//     <p>${lamina.precio}</p>
-//     <p>${lamina.category}</p>
-// </div>
-// )
-//     })

@@ -9,23 +9,24 @@ const ItemListContainer = () => {
 
     const [laminas, setLaminas] = useState([]);
     const [subtitulo, setSubtitulo] = useState(["LAMINAS"]);
-    const categoria = useParams().category;
-    // console.log(categoria);
+    const { category } = useParams()
+
 
     useEffect(() => {
 
         pedirLaminas()
             .then((res) => {
-                if (categoria) {
-                    setLaminas(res.filter((lamina) => lamina.category === categoria));
-                    setSubtitulo(categoria);
+                if (category) {
+                    console.log(category)
+                    res.forEach(lamina => console.log(lamina.category))
+                    setLaminas(res.filter((lamina) => lamina.cat === category));
                 }
                 else {
                     setLaminas(res);
                     setSubtitulo("LAMINAS");
                 }
             })
-    }, [categoria])
+    }, [category])
 
     return (
         <div>

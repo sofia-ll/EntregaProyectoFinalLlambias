@@ -7,6 +7,7 @@
     "precio": 10000, 
     "tamano": "35 cm x 50 cm", 
     "category": "Litografía",
+    "cat": "litografia",
     "descripcion": "Litografía de la serie Paradigmas. Serie hecha a color con superposición de 3 estados diferentes de la piedra."
 },
 {
@@ -17,6 +18,7 @@
     "precio": 10000, 
     "tamano": "35 cm x 50 cm", 
     "category": "Escultura",
+    "cat": "escultura",
     "descripcion": "Escultura de la serie Experiencias. Realizada con alambre de púa antiguo."
 },          
 {
@@ -27,6 +29,7 @@
     "precio": 12000, 
     "tamano": "50 cm x 50 cm", 
     "category": "Pintura",
+    "cat": "pintura",
     "descripcion": "Pintura de la serie Esa luz que existe, esa luz que es. Realizada con técnica mixta."
 },
 {
@@ -37,6 +40,7 @@
     "precio": 10000, 
     "tamano": "35 cm x 50 cm", 
     "category": "Calados",
+    "cat": "calados",
     "descripcion": "Calado sobre papel canson blanco."
 },
 {
@@ -47,6 +51,7 @@
     "precio": 12000, 
     "tamano": "50 cm x 50 cm", 
     "category": "Dibujos",
+    "cat": "dibujo",
     "descripcion": "Dibujo realizado con tintas naturales y microfibra sobre papel."
 },
 {
@@ -57,6 +62,7 @@
     "precio": 10000, 
     "tamano": "35 cm x 50 cm", 
     "category": "Fotografia",
+    "cat": "fotografia",
     "descripcion": "Fotografía de la serie Esa luz que existe, esa luz que es."
 }
 ]
