@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
+import { useNavigate } from 'react-router-dom'
 
 
 const Item = ({ lamina }) => {
+
+    const navigate = useNavigate()
+    const handleRedirect = () => {
+        navigate("/detalle/1")
+    }
 
     return (
         <Link className="ver-mas" to={`/item/${lamina.id}`}>
@@ -23,9 +28,10 @@ const Item = ({ lamina }) => {
                         <p className="card-text fs-6 justify precio"><span className="bold">Categoría: {lamina.category}</span> </p>
                     </div>
 
-                    <div className="card-text fs-6 justify button card-body text-center" id={lamina.id}>
-                        <ItemCount />
+                    <div>
+                        <button onClick={handleRedirect} className="btn">Ver más</button>
                     </div>
+
                 </div>
             </main>
         </Link>
