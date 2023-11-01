@@ -26,6 +26,21 @@
 
         /* navbar */
 
+    nav a {
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 2px 10px 2px 10px;
+        border-radius: 10px;
+    }
+
+    .navahover:hover, h1 a:hover, .footer_a:hover, .navbar-brand:hover {
+        color: $colorfooter;
+        transition-property: all;
+        transition-duration: 0.5s;
+        border-radius: 10px;
+    }
+
     .bkc{
         color: rgba(108, 107, 110, 0.358);
     }

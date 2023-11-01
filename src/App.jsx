@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Litografia from "./components/Litografia"
 import ItemDetail from "./components/ItemDetail"
 import CartWidget from "./components/CartWidget"
+import { Toaster, toast } from 'sonner';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/item:id" element={<ItemDetailContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/laminas" element={<ItemListContainer />} />
           <Route path="/laminas/:category" element={<ItemListContainer />} />
           <Route path="/litografia" element={<Litografia />} />
@@ -27,6 +28,7 @@ function App() {
           <Route path="*" element={<p>Error 404. Vuelva a intentar, por favor.</p>} />
         </Routes>
         <Footer />
+        <Toaster position="bottom-right" />
       </BrowserRouter >
     </>
   )

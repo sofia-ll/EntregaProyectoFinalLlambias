@@ -15,3 +15,6 @@ function pedirLamina() {
 }
 
 export default pedirLamina
+
+
+const [loading, setLoading] = useState(true)

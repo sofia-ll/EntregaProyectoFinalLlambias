@@ -2,15 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 
 
-function ItemCount(stock, initial, onAdd) {
+function ItemCount({ stock, initial, handle, onAdd, item }) {
 
     //ESTADOS
     const [contador, setContador] = useState(0);
-    // const stock = 10;
 
     //ACCIONES
     const handleSumar = () => {
-        setContador(contador + 1);
+        contador < item.stock && setContador(contador + 1);
     }
 
     const handleRestar = () => {
@@ -22,6 +21,12 @@ function ItemCount(stock, initial, onAdd) {
 
     const handleResetear = () => {
         setContador(1);
+    }
+
+    const handleConfirmar = () => {
+        // console.log("confirmar cantidad", contador)
+        handle(contador)
+        // props.handle()
     }
 
     return (
@@ -36,6 +41,8 @@ function ItemCount(stock, initial, onAdd) {
             </div>
             <div>
                 <button onClick={handleResetear} className="btn">Resetear</button>
+                <button onClick={handleConfirmar} className="btn">Confirmar cantidad</button>
+
             </div>
         </div>
     )
@@ -45,26 +52,4 @@ function ItemCount(stock, initial, onAdd) {
 export default ItemCount
 
 
-// const ItemCount = () => {
 
-//     const [number, setNumber] = useState(0);
-
-//     const sumar = () => {
-//         setNumber(number + 1);
-//     }
-
-//     const restar = () => {
-//         setNumber(number - 1);
-//     }
-
-//     return (
-//         <div>
-//             <button onClick={restar}>-</button>
-//             <h2>{number}</h2>
-//             <button onClick={sumar}>+</button>
-//             <hr />
-//         </div>
-//     )
-// };
-
-// export default ItemCount
