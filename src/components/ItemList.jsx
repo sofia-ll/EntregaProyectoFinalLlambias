@@ -4,7 +4,7 @@ import Item from "./Item"
 const ItemList = ({ laminas, subtitulo }) => {
     return (
         <main className="main">
-            <h5 className="subtitulo">{subtitulo}</h5>
+            <h5 className="barrasubt">{subtitulo}</h5>
 
             <div className="laminas">
                 {laminas.map((lamina) => <Item key={lamina.id} lamina={lamina} />)}

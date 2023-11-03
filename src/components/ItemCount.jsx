@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 
 
-function ItemCount({ stock, initial, handle, onAdd, item }) {
+function ItemCount({ stock, inicial, handle, onAdd, item }) {
 
     //ESTADOS
     const [contador, setContador] = useState(0);
@@ -24,9 +24,8 @@ function ItemCount({ stock, initial, handle, onAdd, item }) {
     }
 
     const handleConfirmar = () => {
-        // console.log("confirmar cantidad", contador)
+        console.log("confirmar cantidad", contador)
         handle(contador)
-        // props.handle()
     }
 
     return (
