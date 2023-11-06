@@ -25,7 +25,7 @@ function ItemCount({ stock, inicial, handle, onAdd, item }) {
 
     const handleConfirmar = () => {
         console.log("confirmar cantidad", contador)
-        handle(contador)
+        // handle(contador)
     }
 
     return (

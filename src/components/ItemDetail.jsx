@@ -1,15 +1,16 @@
 import React, { useState } from "react"
 import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom"
-import { contexto } from "../providers/cartContext"
+import { CartContext } from "./CartContext"
 import { useContext } from "react"
 import { Navigate } from "react-router-dom"
+import handleAgregar from "./CartContext"
 
 
 function ItemDetail({ item }) {
     console.log(item)
 
-    const valorDelContexto = useContext(contexto)
+    const valorDelContexto = useContext(CartContext)
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
 
     const handle = (cantidadRecibida) => {
@@ -87,10 +88,5 @@ function ItemDetail({ item }) {
 
 
 }
-
-
-
-
-
 
 export default ItemDetail
