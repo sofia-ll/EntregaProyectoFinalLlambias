@@ -4,13 +4,14 @@ import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import handleAgregarProducto from "./CartContext"
 
 
 function ItemDetail({ item }) {
     console.log(item)
 
-    const valorDelContexto = useContext(CartContext)
+    // const valorDelContexto = useContext(CartContext)
+    const { carrito, handleAgregarProducto } = useContext(CartContext)
+    console.log(carrito)
     const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
 
     const handle = (cantidadRecibida) => {
@@ -78,7 +79,7 @@ function ItemDetail({ item }) {
                         </div>
 
                         <div className="card-text fs-6 justify button boton_tienda card-body text-center" id={item.id}>
-                            <ItemCount item={item} stock={10} inicial={1} handleAgregarProducto={handleAgregarProducto} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
+                            <ItemCount item={item} stock={10} inicial={1} handleAgregarProducto={() => { handleAgregarProducto(item, contador) }} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
                         </div>
 
                     </div>
