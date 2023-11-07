@@ -44,10 +44,13 @@ export const CartProvider = ({ children }) => {
 
     }
 
+    const cantidadCarrito = () => {
+        return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+    }
 
     return (
         <div>
-            <CartContext.Provider value={{ valorDelContexto, handleAgregarProducto, handleIncrementoTotal }} >
+            <CartContext.Provider value={{ valorDelContexto, handleAgregarProducto, handleIncrementoTotal, cantidadCarrito }} >
                 {children}
             </CartContext.Provider>
         </div>

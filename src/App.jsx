@@ -21,6 +21,7 @@ function App() {
     <>
       <BrowserRouter >
         <CartProvider>
+          {/* <CartProvider value={{ carrito, handleAgregarProducto }}> */}
           <NavBar brand="SOFIA LLAMBIAS" />
 
           <Routes>
