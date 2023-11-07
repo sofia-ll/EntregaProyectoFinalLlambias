@@ -3,8 +3,8 @@ import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
 import { useContext } from "react"
-import { Navigate } from "react-router-dom"
-import handleAgregar from "./CartContext"
+import { useNavigate } from "react-router-dom"
+import handleAgregarProducto from "./CartContext"
 
 
 function ItemDetail({ item }) {
@@ -20,7 +20,10 @@ function ItemDetail({ item }) {
     const handleClick = () => {
         valorDelContexto.incrementoTotal(cantidadSeleccionada)
         valorDelContexto.handleAgregarProducto(props.producto, cantidadSeleccionada)
-        Navigate("/carrito")
+        const navigate = useNavigate()
+        navigate("/carrito")
+
+
     }
 
     if (cantidadSeleccionada > 0) {
@@ -45,7 +48,7 @@ function ItemDetail({ item }) {
                             <p className="card-text fs-6 justify precio"><span className="bold">Descripción: {item.descripcion}</span> </p>
                         </div>
                         <div>
-                            <button className="btn" onClick={handleClick}>Terminar compra</button>
+                            <button className="btn" onClick={handleClick} >Terminar compra</button>
                         </div>
                     </div>
                 </main>
@@ -75,7 +78,7 @@ function ItemDetail({ item }) {
                         </div>
 
                         <div className="card-text fs-6 justify button boton_tienda card-body text-center" id={item.id}>
-                            <ItemCount item={item} stock={10} inicial={1} handle={handle} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
+                            <ItemCount item={item} stock={10} inicial={1} handleAgregarProducto={handleAgregarProducto} onAdd={(contador) => console.log("Cantidad agregada:", contador)} />
                         </div>
 
                     </div>

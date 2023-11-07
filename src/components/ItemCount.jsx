@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 
 
+
+
+
 function ItemCount({ stock, inicial, handle, onAdd, item }) {
 
     //ESTADOS
@@ -16,7 +19,6 @@ function ItemCount({ stock, inicial, handle, onAdd, item }) {
         if (contador > 1) {
             setContador(contador - 1);
         }
-
     }
 
     const handleResetear = () => {
@@ -36,7 +38,7 @@ function ItemCount({ stock, inicial, handle, onAdd, item }) {
                 <button onClick={handleSumar} className="btn">+</button>
             </div>
             <div>
-                <button className="btn" onClick={() => onAdd(contador)} disabled={!stock}>Agregar al carrito</button>
+                <button className="btn" onClick={(handleAgregarProducto) => onAdd(contador)} disabled={!stock} >Agregar al carrito</button>
             </div>
             <div>
                 <button onClick={handleResetear} className="btn">Resetear</button>

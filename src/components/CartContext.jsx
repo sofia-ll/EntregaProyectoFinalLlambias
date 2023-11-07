@@ -23,20 +23,23 @@ export const CartProvider = ({ children }) => {
 
         const itemAgregado = { ...item, contador };
 
-        const agregadoAlCarrito = carrito.find((producto) => producto.id === itemAgregado.id)
+        const nuevoCarrito = [...carrito];
+        const agregadoAlCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id)
 
-        setCarrito([...carrito, itemAgregado]);
         if (agregadoAlCarrito) {
-            toast.success('"Agregaste una lámina al carrito"')
+            agregadoAlCarrito.contador += contador;
         }
         else {
-            toast.success('No agregaste un producto a tu carrito')
+            nuevoCarrito.push(itemAgregado);
         }
-
-        setCarrito([...carrito, itemAgregado]);
+        setCarrito([nuevoCarrito]);
     }
 
     const removeItem = () => {
+        const agregadoAlcarrito = carrito.find(x => x === itemAgregado)
+        if (agregadoAlcarrito) {
+
+        }
 
     }
 
