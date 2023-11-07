@@ -1,14 +1,22 @@
 import { createContext } from "react";
 import { useState, useContext } from "react";
+import { toast } from "sonner";
 
 export const CartContext = createContext()
+
 export const CartProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([])
     const [cantidadTotal, setCantidadTotal] = useState(0)
+    const [carritoLength, setCarritoLength] = useState(0)
 
     const handleIncrementoTotal = (nuevaCantidad) => {
         setCantidadTotal(cantidadTotal + nuevaCantidad)
+    }
+
+    const valorDelContexto = {
+        cantidadTotal: cantidadTotal,
+        incrementoTotal: handleIncrementoTotal,
     }
 
     const handleAgregarProducto = () => {
@@ -19,24 +27,23 @@ export const CartProvider = ({ children }) => {
 
         setCarrito([...carrito, itemAgregado]);
         if (agregadoAlCarrito) {
-            console.log("Agregaste una lámina al carrito")
+            toast.success('"Agregaste una lámina al carrito"')
         }
         else {
-            console.log("No agregaste un producto a tu carrito")
+            toast.success('No agregaste un producto a tu carrito')
         }
 
         setCarrito([...carrito, itemAgregado]);
     }
 
+    const removeItem = () => {
 
-    const valorDelContexto = {
-        cantidadTotal: cantidadTotal,
-        incrementoTotal: handleIncrementoTotal,
     }
+
 
     return (
         <div>
-            <CartContext.Provider value={valorDelContexto} >
+            <CartContext.Provider value={{ valorDelContexto, handleAgregarProducto, handleIncrementoTotal }} >
                 {children}
             </CartContext.Provider>
         </div>

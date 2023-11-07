@@ -1,11 +1,14 @@
 import React from "react";
 import CartWidget from "./CartWidget"
-import { Link, NavLink, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 
 const NavBar = (props) => {
 
     const navigate = useNavigate()
+    const valorDelContexto = useContext(CartContext)
 
     return (
 
@@ -32,7 +35,7 @@ const NavBar = (props) => {
                             <Link to="/laminas/dibujo" className="navahover">Dibujo</Link>
                             <Link to="/laminas/fotografia" className="navahover">Fotografía</Link>
                             <Link to="/carrito"><button onClick={() => navigate("/carrito")}><CartWidget icono_carrito="" numero_carrito="0" /></button></Link>
-                            {/* {valorDelContexto.cantidadTotal}  */}
+                            {valorDelContexto.cantidadTotal}
                         </div>
                     </div>
 
