@@ -1,20 +1,14 @@
 import React from "react";
 import CartWidget from "./CartWidget"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useContext } from "react";
-import { CartContext } from "./CartContext";
-
+import { CartContext } from "./CartContext"
 
 const NavBar = (props) => {
-
-    const navigate = useNavigate()
     const valorDelContexto = useContext(CartContext)
-
     return (
 
         <header className="header">
-
-
 
             <nav className="navbar navbar-expand-xl">
                 <div className="container-fluid" >
@@ -34,7 +28,7 @@ const NavBar = (props) => {
                             <Link to="/laminas/calados" className="navahover">Calados</Link>
                             <Link to="/laminas/dibujo" className="navahover">Dibujo</Link>
                             <Link to="/laminas/fotografia" className="navahover">Fotografía</Link>
-                            <Link to="/carrito"><button onClick={() => navigate("/carrito")}><CartWidget icono_carrito="" numero_carrito="0" /></button></Link>
+                            <Link to="/carrito"><CartWidget icono_carrito="" numero_carrito={valorDelContexto.cantidadCarrito()} /></Link>
                             {valorDelContexto.cantidadTotal}
                         </div>
                     </div>

@@ -1,11 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
+import { Link } from "react-router-dom";
+import CartContext from "./CartContext";
+
+
 const CartWidget = (props) => {
 
+
     return (
-        <div>
-            <i className="bi bi-cart-fill icono_carrito">{props.icono_carrito}</i>
-            <p className="numero_carrito">{props.numero_carrito}</p>
-        </div>
+        <Link to="/carrito">
+            <div>
+                <i className="bi bi-cart-fill icono_carrito">{props.icono_carrito}</i>
+                <p className="numero_carrito">{props.numero_carrito}</p>
+            </div>
+        </Link>
     )
 }
 

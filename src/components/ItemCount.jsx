@@ -1,18 +1,19 @@
 import React from 'react'
 import { useState } from 'react';
+import { Toaster, toast } from 'sonner';
 
 
 
 
 
-function ItemCount({ stock, inicial, handle, onAdd, item }) {
+function ItemCount({ stock, item, handleAgregarProducto }) {
 
     //ESTADOS
     const [contador, setContador] = useState(0);
 
     //ACCIONES
     const handleSumar = () => {
-        contador < item.stock && setContador(contador + 1);
+        contador < stock && setContador(contador + 1);
     }
 
     const handleRestar = () => {
@@ -22,12 +23,11 @@ function ItemCount({ stock, inicial, handle, onAdd, item }) {
     }
 
     const handleResetear = () => {
-        setContador(1);
+        setContador(0);
     }
 
     const handleConfirmar = () => {
-        console.log("confirmar cantidad", contador)
-        // handle(contador)
+        toast.success('Confirmás que agregaste' + ' ' + contador + ' ' + 'lámina/s al carrito')
     }
 
     return (
@@ -38,7 +38,7 @@ function ItemCount({ stock, inicial, handle, onAdd, item }) {
                 <button onClick={handleSumar} className="btn">+</button>
             </div>
             <div>
-                <button className="btn" onClick={(handleAgregarProducto) => onAdd(contador)} disabled={!stock} >Agregar al carrito</button>
+                <button className="btn" onClick={() => handleAgregarProducto(item, contador)} disabled={!stock} >Agregar al carrito</button>
             </div>
             <div>
                 <button onClick={handleResetear} className="btn">Resetear</button>
