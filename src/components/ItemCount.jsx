@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
+import { Link } from 'react-router-dom';
 
 
 
@@ -42,7 +43,8 @@ function ItemCount({ stock, item, handleAgregarProducto }) {
             </div>
             <div>
                 <button onClick={handleResetear} className="btn">Resetear</button>
-                <button onClick={handleConfirmar} className="btn">Confirmar cantidad</button>
+                <Link to="/carrito"><button onClick={handleConfirmar} className="btn">Confirmar cantidad</button></Link>
+
 
             </div>
         </div>

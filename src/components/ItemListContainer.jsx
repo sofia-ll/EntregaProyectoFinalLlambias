@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
 
     const [laminas, setLaminas] = useState([]);
-    const [subtitulo, setSubtitulo] = useState(["TIENDA"]);
+    const [subtitulo, setSubtitulo] = useState(["TIENDA de láminas"]);
     const { category } = useParams()
 
 
@@ -17,14 +17,13 @@ const ItemListContainer = () => {
         pedirLaminas()
             .then((res) => {
                 if (category) {
-                    console.log(category)
                     res.forEach(lamina => console.log(lamina.category))
                     setLaminas(res.filter((lamina) => lamina.cat === category));
                     setSubtitulo(category)
                 }
                 else {
                     setLaminas(res);
-                    setSubtitulo("TIENDA");
+                    setSubtitulo("TIENDA de láminas");
                 }
             })
     }, [category])

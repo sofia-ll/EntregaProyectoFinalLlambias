@@ -20,8 +20,7 @@ const NavBar = (props) => {
 
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to="/" className="navahover">Inicio</Link>
-                            <Link to="/laminas" className="navahover">TIENDA</Link>
+                            <Link to="/" className="navahover">Inicio/TIENDA</Link>
                             <Link to="/laminas/litografia" className="navahover">Litografía</Link>
                             <Link to="/laminas/escultura" className="navahover">Escultura</Link>
                             <Link to="/laminas/pintura" className="navahover">Pintura</Link>
