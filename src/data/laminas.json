@@ -70,5 +70,201 @@
     "category": "Fotografia",
     "cat": "fotografia",
     "descripcion": "Fotografía de la serie Esa luz que existe, esa luz que es."
+},
+
+{
+    "imagen": "../src/img/litografia/litografia2.jpeg", 
+    "alt": "obras tecnica litografia", 
+    "id": 6, 
+    "nombre": "Litografía 2", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Litografía",
+    "cat": "litografia",
+    "descripcion": "Litografía de la serie Ancestros. Serie hecha con fondos de dibujo a lápiz de tinta acuarelable e impresión litográfica arriba."
+},
+
+{
+    "imagen": "../src/img/litografia/litografia3.jpeg", 
+    "alt": "obras tecnica litografia", 
+    "id": 7, 
+    "nombre": "Litografía 3", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Litografía",
+    "cat": "litografia",
+    "descripcion": "Litografía de la serie Ahora. Tinta litográfica negra sobre papel Canson Edition. "
+},
+
+{
+    "imagen": "../src/img/litografia/litografia4.jpeg", 
+    "alt": "obras tecnica litografia", 
+    "id": 8, 
+    "nombre": "Litografía 4", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Litografía",
+    "cat": "litografia",
+    "descripcion": "Litografía de la serie Ancestros. Serie hecha con fondos de dibujo a lápiz de tinta acuarelable e impresión litográfica arriba."
+},
+
+{
+    "imagen":"../src/img/pintura2.jpeg", 
+    "alt":"obras tecnica pintura", 
+    "id": 9, 
+    "nombre": "Pintura 2", 
+    "precio": 12000, 
+    "tamano": "50 cm x 70 cm", 
+    "stock": 10,
+    "category": "Pintura",
+    "cat": "pintura",
+    "descripcion": "Pintura de la serie Flores."
+},
+
+{
+    "imagen":"../src/img/pintura3.jpeg", 
+    "alt":"obras tecnica pintura", 
+    "id": 10, 
+    "nombre": "Pintura 3", 
+    "precio": 12000, 
+    "tamano": "50 cm x 70 cm", 
+    "stock": 10,
+    "category": "Pintura",
+    "cat": "pintura",
+    "descripcion": "Pintura de la serie Flores."
+},
+
+{
+    "imagen":"../src/img/pintura4.jpeg", 
+    "alt":"obras tecnica pintura", 
+    "id": 11, 
+    "nombre": "Pintura 4", 
+    "precio": 12000, 
+    "tamano": "50 cm x 50 cm", 
+    "stock": 10,
+    "category": "Pintura",
+    "cat": "pintura",
+    "descripcion": "Pintura de la serie Diálogo. Realizada con técnica mixta."
+}, 
+
+{
+    "imagen":"../src/img/dibujo2.jpeg", 
+    "alt":"obras tecnica dibujo", 
+    "id": 12, 
+    "nombre": "Dibujo 2", 
+    "precio": 12000, 
+    "tamano": "50 cm x 70 cm", 
+    "stock": 10,
+    "category": "Dibujos",
+    "cat": "dibujo",
+    "descripcion": "Dibujo realizado con lápiz de tinta acuarelable sobre papel Canson."
+},
+
+{
+    "imagen":"../src/img/dibujo3.jpeg", 
+    "alt":"obras tecnica dibujo", 
+    "id": 13, 
+    "nombre": "Dibujo 3", 
+    "precio": 12000, 
+    "tamano": "50 cm x 70 cm", 
+    "stock": 10,
+    "category": "Dibujos",
+    "cat": "dibujo",
+    "descripcion": "Dibujo realizado con lápiz de tinta acuarelable sobre papel Canson."
+},
+
+{
+    "imagen":"../src/img/dibujo4.jpeg", 
+    "alt":"obras tecnica dibujo", 
+    "id": 14, 
+    "nombre": "Dibujo 4", 
+    "precio": 12000, 
+    "tamano": "50 cm x 70 cm", 
+    "stock": 10,
+    "category": "Dibujos",
+    "cat": "dibujo",
+    "descripcion": "Dibujo realizado con lápiz de tinta acuarelable sobre papel Canson."
+}, 
+
+{
+    "imagen":"../src/img/fotografia2.jpeg", 
+    "alt":"obras tecnica fotografia", 
+    "id": 15, 
+    "nombre": "Fotografía 2", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Fotografia",
+    "cat": "fotografia",
+    "descripcion": "Fotografía de la serie Esa luz que existe, esa luz que es."
+},
+
+{
+    "imagen":"../src/img/fotografia3.jpeg", 
+    "alt":"obras tecnica fotografia", 
+    "id": 16, 
+    "nombre": "Fotografía 3", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Fotografia",
+    "cat": "fotografia",
+    "descripcion": "Fotografía de la serie Esa luz que existe, esa luz que es."
+},
+
+{
+    "imagen":"../src/img/fotografia4.jpeg", 
+    "alt":"obras tecnica fotografia", 
+    "id": 17, 
+    "nombre": "Fotografía 4", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Fotografia",
+    "cat": "fotografia",
+    "descripcion": "Fotografía de la serie Esa luz que existe, esa luz que es."
+}, 
+
+{
+    "imagen":"../src/img/escultura/escultura2.jpeg", 
+    "alt":"obras tecnica escultura", 
+    "id": 18, 
+    "nombre": "Escultura 2", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Escultura",
+    "cat": "escultura",
+    "descripcion": "Escultura de la serie Experiencias. Realizada con alambre de púa antiguo."
+},       
+
+{
+    "imagen":"../src/img/escultura/escultura3.jpeg", 
+    "alt":"obras tecnica escultura", 
+    "id": 19, 
+    "nombre": "Escultura 3", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Escultura",
+    "cat": "escultura",
+    "descripcion": "Escultura de la serie Experiencias. Realizada con alambre de púa antiguo."
+},   
+
+{
+    "imagen":"../src/img/escultura/escultura4.jpeg", 
+    "alt":"obras tecnica escultura", 
+    "id": 20, 
+    "nombre": "Escultura 4", 
+    "precio": 10000, 
+    "tamano": "35 cm x 50 cm", 
+    "stock": 10,
+    "category": "Escultura",
+    "cat": "escultura",
+    "descripcion": "Escultura de la serie Experiencias. Realizada con alambre de púa antiguo."
 }
+
 ]
