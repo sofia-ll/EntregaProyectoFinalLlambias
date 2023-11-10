@@ -7,12 +7,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Litografia from "./components/Litografia"
 import { Toaster } from 'sonner';
 import { CartProvider } from "./components/CartContext"
-import Cart from "./components/Cart"
+import CartWidget from "./components/CartWidget"
+import Checkout from "./components/Checkout"
 
 
 
 function App() {
-
 
   return (
     <>
@@ -26,9 +26,10 @@ function App() {
             <Route path="/laminas" element={<ItemListContainer />} />
             <Route path="/laminas/:category" element={<ItemListContainer />} />
             <Route path="/litografia" element={<Litografia />} />
-            <Route path="/carrito" element={<Cart />} />
+            <Route path="/carrito" element={<CartWidget />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<p>Vuelva a intentar, por favor.</p>} />
+            <Route path="*" element={<p>Error 404. Vuelva a intentar, por favor.</p>} />
           </Routes>
           <Footer />
         </CartProvider>

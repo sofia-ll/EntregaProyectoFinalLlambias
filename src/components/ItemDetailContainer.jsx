@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import pedirLaminaPorId from "./pedirLaminaPorId";
 import { useParams } from "react-router-dom";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
 
 const ItemDetailContainer = () => {
 
@@ -13,10 +13,15 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-        pedirLaminaPorId(Number(id))
-            .then((res) => {
-                setItem(res);
+        const docRef = doc(db, "productos", id);
+        getDoc(docRef)
+            .then((resp) => {
+                setItem(
+                    { ...resp.data(), id: resp.id }
+                );
             })
+
+
     }, [id])
 
     return (

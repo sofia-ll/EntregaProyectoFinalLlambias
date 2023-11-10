@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
@@ -32,7 +32,7 @@ function ItemDetail({ item }) {
                     </div>
 
                     <div className="card-text fs-6 justify button boton_tienda card-body text-center" id={item.id}>
-                        <ItemCount item={item} stock={10} handleAgregarProducto={handleAgregarProducto} />
+                        <ItemCount stock={10} item={item} handleAgregarProducto={handleAgregarProducto} />
                     </div>
 
                 </div>

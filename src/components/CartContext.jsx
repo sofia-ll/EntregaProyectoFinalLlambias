@@ -31,10 +31,13 @@ export const CartProvider = ({ children }) => {
     const sacarProducto = (itemAgregado) => {
         const agregadoAlcarrito = carrito.find(x => x === itemAgregado)
         if (agregadoAlcarrito) {
-
+            let index = carrito.indexOf(agregadoAlcarrito)
+            let nuevoCarrito = carrito
+            nuevoCarrito.splice(index, 1)
+            cantidadCarrito()
+            precioTotal()
 
         }
-
     }
 
     const cantidadCarrito = () => {
