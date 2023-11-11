@@ -17,7 +17,6 @@ export const CartProvider = ({ children }) => {
     const handleAgregarProducto = (item, contador) => {
         const itemAgregado = { ...item, contador };
         const nuevoCarrito = [...carrito];
-        console.log(nuevoCarrito)
         const agregadoAlCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id)
 
         if (agregadoAlCarrito) {
@@ -37,7 +36,6 @@ export const CartProvider = ({ children }) => {
     }
 
     const cantidadCarrito = () => {
-        // return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
         return carrito.length ? carrito.reduce((acc, prod) => acc + prod.precio * prod.contador) : 0, 0;
 
     }
@@ -54,7 +52,7 @@ export const CartProvider = ({ children }) => {
 
     return (
         <div>
-            <CartContext.Provider value={{ carrito, handleAgregarProducto, handleIncrementoTotal, cantidadCarrito, precioTotal, vaciarCarrito, sacarProducto }} >
+            <CartContext.Provider value={{ carrito, handleAgregarProducto, handleIncrementoTotal, cantidadCarrito, precioTotal, vaciarCarrito }} >
                 {children}
             </CartContext.Provider>
         </div>

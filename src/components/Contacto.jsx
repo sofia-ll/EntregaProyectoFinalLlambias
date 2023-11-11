@@ -9,7 +9,6 @@ const Contacto = () => {
     const { register, handleSubmit } = useForm();
 
     const send = (data) => {
-        console.log(data);
         toast.success('¡Gracias por enviarnos tu consulta! Te contestaremos lo antes posible');
     }
 

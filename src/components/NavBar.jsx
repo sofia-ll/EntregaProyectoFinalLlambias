@@ -6,7 +6,7 @@ import { CartContext } from "./CartContext"
 
 const NavBar = (props) => {
     const valorDelContexto = useContext(CartContext)
-    console.log(valorDelContexto)
+
     return (
 
         <header className="header">

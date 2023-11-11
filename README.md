@@ -96,13 +96,15 @@
 
 ## Routing:
 
-[link](video screencastify)
+[link](https://watch.screencastify.com/v/R68ez2p7lqv5qry5vNJE)
 
 
 
 ## Comentarios:
 
  - Al finalizar la carrera de Desarrollo Full Stack me gustaría lanzar mi propio sitio web. Modificaría bastante lo que ya hice. Fui aprendiendo cosas nuevas a lo largo del tiempo y me gustaría aprender más, haciendo nuevos cursos e investigando por mi cuenta.
+
+ - Sé que tengo que aprender muchísimo más así que quiero hacer muchos cursos más e investigar por mi cuenta. Me costó muchísimo hacer la entrega final. Gracias por todo. Saludos.
 
 
 

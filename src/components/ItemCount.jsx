@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 
 function ItemCount({ stock, item, handleAgregarProducto }) {
 
-    //ESTADOS
+
     const [contador, setContador] = useState(0);
 
-    //ACCIONES
+
     const handleSumar = () => {
         contador < stock && setContador(contador + 1);
     }

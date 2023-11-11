@@ -20,7 +20,6 @@ const Checkout = () => {
             productos: carrito,
             total: precioTotal()
         }
-        console.log(pedido);
         toast.success('¡Muchas gracias por tu compra! Que la disfrutes :)');
 
         const pedidosRef = collection(db, "pedidos")

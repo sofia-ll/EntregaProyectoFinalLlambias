@@ -26,6 +26,7 @@ const ItemListContainer = () => {
                         return { ...doc.data(), id: doc.id }
                     })
                 )
+                setSubtitulo(category)
             })
 
     }, [category])
