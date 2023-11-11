@@ -6,8 +6,9 @@ export const CartContext = createContext()
 
 const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
 export const CartProvider = ({ children }) => {
-    const [carrito, setCarrito] = useState([carritoInicial])
+    const [carrito, setCarrito] = useState(carritoInicial)
     const [cantidadTotal, setCantidadTotal] = useState(0)
     const handleIncrementoTotal = (nuevaCantidad) => {
         setCantidadTotal(cantidadTotal + nuevaCantidad)
@@ -25,23 +26,18 @@ export const CartProvider = ({ children }) => {
         else {
             nuevoCarrito.push(itemAgregado);
         }
-        setCarrito([nuevoCarrito]);
+        setCarrito(nuevoCarrito);
     }
 
     const sacarProducto = (itemAgregado) => {
         const agregadoAlcarrito = carrito.find(x => x === itemAgregado)
         if (agregadoAlcarrito) {
-            let index = carrito.indexOf(agregadoAlcarrito)
-            let nuevoCarrito = carrito
-            nuevoCarrito.splice(index, 1)
-            cantidadCarrito()
-            precioTotal()
 
         }
     }
 
     const cantidadCarrito = () => {
-        return carrito.length ? carrito.reduce((acc, prod) => acc + prod.contador, 0) : 0;
+        return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
     }
 
     const precioTotal = () => {
@@ -59,7 +55,7 @@ export const CartProvider = ({ children }) => {
 
     return (
         <div>
-            <CartContext.Provider value={{ handleAgregarProducto, handleIncrementoTotal, cantidadCarrito, precioTotal, vaciarCarrito, sacarProducto }} >
+            <CartContext.Provider value={{ carrito, handleAgregarProducto, handleIncrementoTotal, cantidadCarrito, precioTotal, vaciarCarrito, sacarProducto }} >
                 {children}
             </CartContext.Provider>
         </div>
