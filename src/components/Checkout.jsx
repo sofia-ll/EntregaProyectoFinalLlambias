@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react';
 import CartContext from './CartContext';
 import { toast } from 'sonner';
@@ -7,6 +7,8 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 const Checkout = () => {
+
+    const [pedidoId, setPedidoId] = useState("");
 
     const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
@@ -23,7 +25,22 @@ const Checkout = () => {
 
         const pedidosRef = collection(db, "pedidos")
 
-        addDoc(pedidosRef, pedido);
+        addDoc(pedidosRef, pedido)
+            .then((doc) => {
+                setPedidoId(doc.id);
+                vaciarCarrito();
+            })
+    }
+
+    if (pedidoId) {
+        return (
+            <div className="container">
+                <h2 className="barrasubt">¡Muchas gracias por tu compra!</h2>
+                <h3> Tu número de pedido es: </h3>
+                <p>{pedidoId} </p>
+
+            </div>
+        )
     }
 
     return (
