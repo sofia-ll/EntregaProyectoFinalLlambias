@@ -28,6 +28,8 @@ const NavBar = (props) => {
                             <Link to="/laminas/calados" className="navahover">Calados</Link>
                             <Link to="/laminas/dibujo" className="navahover">Dibujo</Link>
                             <Link to="/laminas/fotografia" className="navahover">Fotografía</Link>
+                            <Link to="/contacto" className="navahover">Contacto</Link>
+
                             <Link to="/carrito"><CartWidget icono_carrito="" numero_carrito={valorDelContexto.cantidadCarrito()} /></Link>
                         </div>
                     </div>

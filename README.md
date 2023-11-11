@@ -91,6 +91,7 @@
 - Vite 4.4.5 [link](https://vitejs.dev/)
 - Firebase
 - Iloveimg [link](https://www.iloveimg.com/es)
+- React hook form 7.48.2 [link](https://react-hook-form.com/)
 
 
 ## Routing:

@@ -25,6 +25,7 @@ function ItemCount({ stock, item, handleAgregarProducto }) {
 
     const handleResetear = () => {
         setContador(0);
+        toast.success('Vaciaste el carrito')
     }
 
     const handleConfirmar = () => {

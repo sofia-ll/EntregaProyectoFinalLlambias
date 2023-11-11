@@ -9,6 +9,7 @@ import { Toaster } from 'sonner';
 import { CartProvider } from "./components/CartContext"
 import Cart from "./components/Cart"
 import Checkout from "./components/Checkout"
+import Contacto from "./components/Contacto"
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/laminas" element={<ItemListContainer />} />
             <Route path="/laminas/:category" element={<ItemListContainer />} />
             <Route path="/litografia" element={<Litografia />} />
+            <Route path="/contacto" element={<Contacto />} />
             <Route path="/carrito" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
