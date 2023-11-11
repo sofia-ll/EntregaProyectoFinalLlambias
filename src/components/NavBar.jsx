@@ -6,6 +6,7 @@ import { CartContext } from "./CartContext"
 
 const NavBar = (props) => {
     const valorDelContexto = useContext(CartContext)
+    console.log(valorDelContexto)
     return (
 
         <header className="header">
@@ -28,7 +29,6 @@ const NavBar = (props) => {
                             <Link to="/laminas/dibujo" className="navahover">Dibujo</Link>
                             <Link to="/laminas/fotografia" className="navahover">Fotografía</Link>
                             <Link to="/carrito"><CartWidget icono_carrito="" numero_carrito={valorDelContexto.cantidadCarrito()} /></Link>
-                            {valorDelContexto.cantidadTotal}
                         </div>
                     </div>
 
